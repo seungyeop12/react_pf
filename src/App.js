@@ -1,5 +1,5 @@
 import Header from './components/common/header/Header';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Department from './components/sub/department/Department';
 import Youtube from './components/sub/youtube/Youtube';
 import './styles/Global.scss';
@@ -10,7 +10,14 @@ import Contact from './components/sub/contact/Contact';
 function App() {
 	return (
 		<>
-			<Header />
+			<Switch>
+				<Route exact path='/'>
+					<Header />
+				</Route>
+				<Route path='/'>
+					<Header />
+				</Route>
+			</Switch>
 			<Route path='/department' component={Department} />
 			<Route path='/youtube' component={Youtube} />
 			<Route path='/members' component={Members} />
