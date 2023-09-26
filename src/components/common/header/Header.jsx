@@ -2,9 +2,10 @@ import styles from './Header.module.scss';
 import clsx from 'clsx';
 import { Link, NavLink } from 'react-router-dom';
 
-export default function Header() {
+export default function Header({ ismain }) {
+	console.log(ismain);
 	return (
-		<header className={clsx(styles.header)}>
+		<header className={clsx(styles.header, ismain ? styles.main : styles.sub)}>
 			<h1>
 				<Link to='/'>LOGO</Link>
 			</h1>

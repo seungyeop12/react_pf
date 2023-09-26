@@ -12,10 +12,10 @@ function App() {
 		<>
 			<Switch>
 				<Route exact path='/'>
-					<Header />
+					<Header ismain={true} />
 				</Route>
 				<Route path='/'>
-					<Header />
+					<Header ismain={false} />
 				</Route>
 			</Switch>
 			<Route path='/department' component={Department} />
